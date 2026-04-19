@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airpods RP</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 35px;
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 5px 10px;
+      background: #5865f2;
+      border-radius: 999px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #cfcfcf;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    a.button, button.button {
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.2s;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .fivem { background: #1f6feb; }
+    .discord { background: #5865f2; }
+    .shop { background: #2ecc71; }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #141414;
+      padding: 25px;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 15px;
+    }
+
+    .shop-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .shop-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .close {
+      margin-top: 10px;
+      background: #e74c3c;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="tag">Airpods RP</div>
+    <h1>Velkommen til Airpods RP</h1>
+    <p>
+      Et seriøst men chill FiveM roleplay community hvor vi fokuserer på god RP, fede oplevelser og et aktivt fællesskab.
+      Hop ind og vær en del af serveren.
+    </p>
+
+    <div class="buttons">
+      <a class="button fivem" href="https://servers.fivem.net/servers/detail/kqmpk5v" target="_blank">Join FiveM</a>
+      <a class="button discord" href="https://discord.gg/h9fbr5PEQK" target="_blank">Discord</a>
+      <button class="button shop" onclick="openModal()">Shop</button>
+    </div>
+
+    <footer>© Airpods RP 2026</footer>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>Airpods RP Shop</h2>
+
+      <div class="shop-item">👑 <strong>Borgmester – 199 kr</strong> Stor adgang til TxAdmin</div>
+      <div class="shop-item">🏆 <strong>Ejer – 149 kr</strong> Medium adgang til TxAdmin</div>
+      <div class="shop-item">💎 <strong>Med Ejer – 119 kr</strong> Begrænset adgang til TxAdmin</div>
+      <div class="shop-item">📊 <strong>Community Manager – 89 kr</strong> Fuld adgang til F9 + Discord fordele</div>
+      <div class="shop-item">📋 <strong>Bestyrelse – 69 kr</strong> Fuld adgang til F9 Menu</div>
+      <div class="shop-item">🛡️ <strong>Head Ledelse – 59 kr</strong> Fuld adgang til F9 Menu</div>
+      <div class="shop-item">📌 <strong>Ledelse – 49 kr</strong> Fuld adgang til F9 Menu</div>
+      <div class="shop-item">🚨 <strong>Head Admin – 39 kr</strong> Stort udvalg af funktioner</div>
+      <div class="shop-item">🔧 <strong>Admin – 29 kr</strong> Begrænset F9 adgang</div>
+      <div class="shop-item">💬 <strong>Supporter – 19 kr</strong> Begrænset F9 adgang</div>
+      <div class="shop-item">🌱 <strong>Prøve Supporter – 9 kr</strong> Lille adgang til F9</div>
+
+      <p style="margin-top:15px; color:#ccc;">
+        <strong>Kontakt ID 1 over Discord for køb</strong><br><br>
+        Discord: <a href="https://discord.gg/h9fbr5PEQK" target="_blank" style="color:#5865f2;">Join her</a><br>
+        FiveM Server: <a href="https://servers.fivem.net/servers/detail/kqmpk5v" target="_blank" style="color:#1f6feb;">Join her</a>
+      </p>
+
+      <button class="button close" onclick="closeModal()">Luk</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onclick = function(e) {
+      const modal = document.getElementById('modal');
+      if (e.target === modal) modal.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
